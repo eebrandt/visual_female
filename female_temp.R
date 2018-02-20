@@ -1,0 +1,16 @@
+#round 1 female preference graph
+par(mfrow=c(1,2), oma=c(0,0,3,0))
+pie(slices,labels = warmlbls, col=c("red", "pink"), radius = .9)
+mtext(expression(paste("warm (32-49",degree," C)")), 1, line = 1, cex = 1.25)
+mtext("n = 15", 1, line = 2, cex = 1.25)
+pie(coldslices, labels = coldlbls, col = c("blue", "lightblue"), radius = .9)
+mtext(expression(paste("cool (16-24",degree," C)")), 1, line = 1, cex = 1.25)
+mtext("n = 14", 1, line = 2, cex = 1.25)
+mtext( "Female Copulation Rates at Two Temperatures", outer = TRUE, cex = 1.75 )
+box(which = "outer", col = "black")
+
+barplot(barfempref, ylab = "percent of females",cex.lab = "1.1", main = "Temperature Dependent Mating Rates", col = c("red", "pink", "blue", "lightblue"), axes ="false")
+mtext("warm                       cool", 1, line=3, cex=1.25)
+axis(1, at = 1:4, tick = "false", labels = acrej)
+axis(2, at = barys)
+box(which = "plot")
